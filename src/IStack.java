@@ -9,6 +9,8 @@
 public interface IStack<T> {
 
 	int count();
+
+	int size();
 	
 	boolean isEmpty();
 	

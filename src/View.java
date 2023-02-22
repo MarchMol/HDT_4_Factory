@@ -12,7 +12,7 @@ public class View {
             System.out.println("4. List Doblemente Encadenada");
             System.out.println("5. Salir");
             temp = scan.nextInt();
-        } while(temp<1 || temp>4);
+        } while(temp<1 || temp>5);
         return temp;
     }
 }

@@ -6,17 +6,23 @@
  * @author MAAG
  *
  */
-public class St_ListSingle<T> implements IStack<T> {
+public class St_List<T> implements IStack<T> {
 
-	private SingleLinkedList<T> listaInterna;
+	private IList<T> listaInterna;
 	
-	public St_ListSingle()
-	{
-		listaInterna = new SingleLinkedList<T>();
+	public St_List(String tipo) {
+		ListFactory lf = new ListFactory();
+		listaInterna = lf.getInstance(tipo);
 	}
+
 	
 	@Override
 	public int count() {
+		return listaInterna.Count();
+	}
+
+	@Override
+	public int size() {
 		return listaInterna.Count();
 	}
 
@@ -32,7 +38,7 @@ public class St_ListSingle<T> implements IStack<T> {
 
 	@Override
 	public T pull() {
-		return listaInterna.Delete(0);
+		return listaInterna.DeleteAtStart();
 	}
 
 	@Override
@@ -40,4 +46,5 @@ public class St_ListSingle<T> implements IStack<T> {
 		return listaInterna.Get(0);
 	}
 
+	
 }

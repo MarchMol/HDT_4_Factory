@@ -1,13 +1,12 @@
 public class ListFactory {
-    public IList getInstance(int tipo){
+    public IList getInstance(String tipo){
 
-        switch (tipo){
-            case 1: //Simple
-                return new SingleLinkedList();
-            case 2: //Doble
-                return new DoubleLinkedList();
-            default:
-                return null;
-        }
+        return switch (tipo.toLowerCase()) {
+            case "simple" -> //Simple
+                    new SingleLinkedList();
+            case "doble" -> //Doble
+                    new DoubleLinkedList();
+            default -> null;
+        };
     }
 }

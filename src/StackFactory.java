@@ -1,15 +1,15 @@
 public class StackFactory {
-    public IStack getInstance(int tipo){
+    public IStack getInstance(String tipo){
 
-        return switch (tipo) {
-            case 1 -> //ArrayList
+        return switch (tipo.toLowerCase()) {
+            case "arraylist" -> //ArrayList
                     new St_ArrayList();
-            case 2 -> //Vector
+            case "vector" -> //Vector
                     new St_Vector();
-            case 3 -> //Lista Simple
-                    new St_ListSingle();
-            case 4 -> //Lista Doble
-                    new St_ListDouble();
+            case "simple" -> //Lista
+                    new St_List("simple");
+            case "doble" -> //Lista
+                    new St_List("doble");
             default -> null;
         };
     }

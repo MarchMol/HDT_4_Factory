@@ -15,9 +15,14 @@ public class St_ArrayList<T> implements IStack<T> {
 	public St_ArrayList() {
 		miListaInterna = new ArrayList<T>(); 
 	}
-	
+
 	@Override
 	public int count() {
+		return miListaInterna.size();
+	}
+
+	@Override
+	public int size() {
 		return miListaInterna.size();
 	}
 

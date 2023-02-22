@@ -18,6 +18,11 @@ public class St_Vector<T> implements IStack<T> {
 	}
 
 	@Override
+	public int size() {
+		return miVectorInterno.size();
+	}
+
+	@Override
 	public boolean isEmpty() {
 		return miVectorInterno.isEmpty();
 	}
