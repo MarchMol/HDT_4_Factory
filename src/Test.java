@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Test {
 
     @org.junit.Test
-    public void Infix_To_Postfix() { // Test para Single Linked List
+    public void Infix_To_Postfix() { // Test para Infix to postfix
         String infix = Main.infix_to_postfix("(4-3)+3");
         assertEquals("43-3+", infix);
         infix = Main.infix_to_postfix("2*(8/4)");

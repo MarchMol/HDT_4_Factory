@@ -6,7 +6,9 @@ import java.util.ArrayList;
 public class Main {
     public static IStack<Integer> stk;
 
-
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         View v = new View();
         StackFactory stf = new StackFactory();
@@ -49,6 +51,11 @@ public class Main {
         }
     }
 
+    
+    /** 
+     * @param line
+     * @return String
+     */
     public static String infix_to_postfix(String line) {
         String postfix = "";
         StackFactory stf = new StackFactory();

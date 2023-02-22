@@ -1,8 +1,4 @@
 /**
- * 
- */
-
-/**
  * @author MAAG
  *
  */
@@ -16,6 +12,10 @@ public class St_List<T> implements IStack<T> {
 	}
 
 	
+	
+	/** 
+	 * @return int
+	 */
 	@Override
 	public int count() {
 		return listaInterna.Count();

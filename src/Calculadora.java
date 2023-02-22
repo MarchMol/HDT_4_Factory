@@ -8,6 +8,10 @@ public class Calculadora implements ICalculadora{
         flag = true;
     }
 
+    
+    /** 
+     * @return Calculadora
+     */
     public static Calculadora getInstance(){
         if(flag){
             return Unica_Calc;

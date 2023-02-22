@@ -12,6 +12,10 @@ public class St_Vector<T> implements IStack<T> {
 		miVectorInterno = new Vector<T>();
 	}
 	
+	
+	/** 
+	 * @return int
+	 */
 	@Override
 	public int count() {
 		return miVectorInterno.size();

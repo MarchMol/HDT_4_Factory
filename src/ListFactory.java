@@ -1,4 +1,9 @@
 public class ListFactory {
+    
+    /** 
+     * @param tipo
+     * @return IList
+     */
     public IList getInstance(String tipo){
 
         return switch (tipo.toLowerCase()) {

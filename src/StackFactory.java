@@ -1,4 +1,9 @@
 public class StackFactory {
+    
+    /** 
+     * @param tipo
+     * @return IStack
+     */
     public IStack getInstance(String tipo){
 
         return switch (tipo.toLowerCase()) {

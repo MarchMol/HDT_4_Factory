@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 import java.util.ArrayList;
 
 /**
@@ -16,6 +12,10 @@ public class St_ArrayList<T> implements IStack<T> {
 		miListaInterna = new ArrayList<T>(); 
 	}
 
+	
+	/** 
+	 * @return int
+	 */
 	@Override
 	public int count() {
 		return miListaInterna.size();

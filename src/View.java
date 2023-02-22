@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class View {
+    
+    /** 
+     * @return int
+     */
     public int menu(){
         int temp;
         Scanner scan = new Scanner(System.in);
