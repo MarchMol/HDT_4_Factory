@@ -17,6 +17,13 @@ public class Calculadora implements ICalculadora{
         }
     }
 
+    /**
+     *
+     * @param operandos
+     * @return
+     */
+
+
     @Override
     public boolean isOneItem(IStack operandos) {
         if (operandos.size() == 1) {

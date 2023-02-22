@@ -12,7 +12,11 @@ public class DoubleLinkedList<T> implements IList<T> {
 	private DoubleNode<T> start;
 	private DoubleNode<T> end;
 	private int count;
-	
+
+	/**
+	 *
+	 */
+
 	public DoubleLinkedList() {
 		start = null;
 		end = null;

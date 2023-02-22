@@ -3,8 +3,8 @@
  */
 
 /**
- * @author MAAG
  *
+ * @param <T>
  */
 public class DoubleNode<T> {
 	private T value;

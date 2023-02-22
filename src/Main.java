@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Main {
     public static IStack<Integer> stk;
 
+
     public static void main(String[] args) {
         View v = new View();
         StackFactory stf = new StackFactory();
@@ -33,6 +34,7 @@ public class Main {
             Leer();
             op = v.menu();
         }
+        System.out.println("Gracias por utilizar el programa!");
     }
 
     public static void Leer() {
@@ -40,22 +42,11 @@ public class Main {
             String line;
             while ((line = br.readLine()) != null) {
                 // Evaluar la expresión postfix
-                System.out.println(infix_to_postfix(line));
                 System.out.println("Resultado: " + Evaluar(infix_to_postfix(line)));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static int preced(char ch) {
-        return switch (ch) {
-            case '+' -> 1;
-            case '-' -> 1;
-            case '*' -> 2;
-            case '/' -> 2;
-            default -> 0;
-        };
     }
 
     public static String infix_to_postfix(String line) {
@@ -68,8 +59,9 @@ public class Main {
                 Integer.parseInt(line.charAt(i)+"");
                 isNum=true;
             } catch(Exception e){}
+
             if (isNum) {
-                postfix = postfix + line.charAt(i);
+                postfix += line.charAt(i);
             } else if(line.charAt(i)== '-' || line.charAt(i)== '+' || line.charAt(i)== '*' || line.charAt(i)== '/'){
                 stack.push(line.charAt(i) + "");
             } else if (line.charAt(i) == '(') {
